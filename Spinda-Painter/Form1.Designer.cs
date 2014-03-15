@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBoxResult = new System.Windows.Forms.PictureBox();
             this.spot4 = new System.Windows.Forms.PictureBox();
             this.spot3 = new System.Windows.Forms.PictureBox();
             this.spot2 = new System.Windows.Forms.PictureBox();
             this.spot1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.pictureBoxResult = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spot4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spot3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spot2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spot1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -55,6 +55,44 @@
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "88888888";
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(421, 15);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(101, 16);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "グリッド線を表示";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(117, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 12);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(426, 552);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 12);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Produced by odan";
+            // 
+            // pictureBoxResult
+            // 
+            this.pictureBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxResult.Location = new System.Drawing.Point(458, 38);
+            this.pictureBoxResult.Name = "pictureBoxResult";
+            this.pictureBoxResult.Size = new System.Drawing.Size(64, 64);
+            this.pictureBoxResult.TabIndex = 7;
+            this.pictureBoxResult.TabStop = false;
             // 
             // spot4
             // 
@@ -115,44 +153,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(421, 15);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(101, 16);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "グリッド線を表示";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // pictureBoxResult
-            // 
-            this.pictureBoxResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxResult.Location = new System.Drawing.Point(458, 37);
-            this.pictureBoxResult.Name = "pictureBoxResult";
-            this.pictureBoxResult.Size = new System.Drawing.Size(64, 64);
-            this.pictureBoxResult.TabIndex = 7;
-            this.pictureBoxResult.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 12);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(426, 552);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 12);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Produced by odan";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -172,12 +172,12 @@
             this.Name = "Form1";
             this.Text = "3gen-Spinda-Painter";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spot4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spot3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spot2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spot1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

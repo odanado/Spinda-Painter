@@ -77,8 +77,8 @@ namespace Spinda_Painter
                 {
                     for (int k = 0; k < spots[i][j].Length; k++)
                     {
-                        int nx = x + j;
-                        int ny = y + k;
+                        int nx = x + k;
+                        int ny = y + j;
 
                         if (spots[i][j][k] == '*' && spinda.GetPixel(nx, ny) != color)
                         {

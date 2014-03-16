@@ -174,12 +174,6 @@ namespace Spinda_Painter
             textBox1.Text = String.Format("{0:X08}", PID);
         }
 
-        private bool check(int left, int top, int index)
-        {
-            return (lower[2*index] <= left && left <= upper[2*index] &&
-                     lower[2*index+1] <= top && top <= upper[2*index+1]
-                     );
-        }
 
         #region spots
         String[][] spots =  {
@@ -263,16 +257,18 @@ namespace Spinda_Painter
                 int left = spot1.Left + e.X - spot1MousePoint.X;
                 int top = spot1.Top + e.Y - spot1MousePoint.Y;
 
-                if (check(left, top, 0))
-                {
-                    spot1.Left = left - left % magnification;
-                    spot1.Top = top - top % magnification;
+                left = Math.Max(lower[0], left);
+                left = Math.Min(upper[0], left);
 
-                    updatePID(spot1.Left, spot1.Top, 0);
-                    drawResult();
-                    setLabel();
+                top = Math.Max(lower[1], top);
+                top = Math.Min(upper[1], top);
 
-                }
+                spot1.Left = left - left % magnification;
+                spot1.Top = top - top % magnification;
+
+                updatePID(spot1.Left, spot1.Top, 0);
+                drawResult();
+                setLabel();
 
             }
         }
@@ -292,16 +288,20 @@ namespace Spinda_Painter
             {
                 int left = spot2.Left + e.X - spot2MousePoint.X;
                 int top = spot2.Top + e.Y - spot2MousePoint.Y;
-                if (check(left, top, 1))
-                {
-                    spot2.Left = left - left % magnification;
-                    spot2.Top = top - top % magnification;
 
-                    updatePID(spot2.Left, spot2.Top, 1);
-                    drawResult();
-                    setLabel();
+                left = Math.Max(lower[2], left);
+                left = Math.Min(upper[2], left);
 
-                }
+                top = Math.Max(lower[3], top);
+                top = Math.Min(upper[3], top);
+
+
+                spot2.Left = left - left % magnification;
+                spot2.Top = top - top % magnification;
+
+                updatePID(spot2.Left, spot2.Top, 1);
+                drawResult();
+                setLabel();
 
             }
         }
@@ -322,16 +322,19 @@ namespace Spinda_Painter
                 int left = spot3.Left + e.X - spot3MousePoint.X;
                 int top = spot3.Top + e.Y - spot3MousePoint.Y;
 
-                if (check(left, top, 2))
-                {
-                    spot3.Left = left - left % magnification;
-                    spot3.Top = top - top % magnification;
+                left = Math.Max(lower[4], left);
+                left = Math.Min(upper[4], left);
 
-                    updatePID(spot3.Left, spot3.Top, 2);
-                    drawResult();
-                    setLabel();
+                top = Math.Max(lower[5], top);
+                top = Math.Min(upper[5], top);
 
-                }
+                spot3.Left = left - left % magnification;
+                spot3.Top = top - top % magnification;
+
+                updatePID(spot3.Left, spot3.Top, 2);
+                drawResult();
+                setLabel();
+
             }
         }
 
@@ -352,17 +355,18 @@ namespace Spinda_Painter
                 int left = spot4.Left + e.X - spot4MousePoint.X;
                 int top = spot4.Top + e.Y - spot4MousePoint.Y;
 
-                if (check(left, top, 3))
-                {
-                    spot4.Left = left - left % magnification;
-                    spot4.Top = top - top % magnification;
+                left = Math.Max(lower[6], left);
+                left = Math.Min(upper[6], left);
 
-                    updatePID(spot4.Left, spot4.Top, 3);
-                    drawResult();
-                    setLabel();
+                top = Math.Max(lower[7], top);
+                top = Math.Min(upper[7], top);
 
-                }
+                spot4.Left = left - left % magnification;
+                spot4.Top = top - top % magnification;
 
+                updatePID(spot4.Left, spot4.Top, 3);
+                drawResult();
+                setLabel();
             }
         }
 
